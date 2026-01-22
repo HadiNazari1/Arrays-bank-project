@@ -989,3 +989,8 @@ const dogsSorted = dogs.toSorted((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
 
 */
+const eurToUsd=1.1;
+const reuslt= movement.map(function(mov){
+  return mov*eurToUsd;
+}
+const callback=movement.map(mov=>mov*eurToUsd);
