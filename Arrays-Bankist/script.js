@@ -994,3 +994,8 @@ const reuslt= movement.map(function(mov){
   return mov*eurToUsd;
 }
 const callback=movement.map(mov=>mov*eurToUsd);
+
+const euroToUSDfor=[];
+for (const mov of movements)euroToUSDfor.push(mov.eurToUsd);
+const movementDescription=movement.map(mov,1)=>`Movement ${i+1}: you ${mov>0?'deposit':'withdrew'}${Math.abs(mov)}`
+console.log(movementDescription)
