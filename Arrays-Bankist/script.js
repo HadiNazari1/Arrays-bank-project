@@ -999,3 +999,17 @@ const euroToUSDfor=[];
 for (const mov of movements)euroToUSDfor.push(mov.eurToUsd);
 const movementDescription=movement.map(mov,1)=>`Movement ${i+1}: you ${mov>0?'deposit':'withdrew'}${Math.abs(mov)}`
 console.log(movementDescription)
+
+const balance2= movements.reduce((acc,cur)=>acc+cur,0);
+console.log(balance2);
+let balance =0;
+for (const mov of movements)balance+=mov;
+console.log(balance)
+
+const maz=movements.reduce((acc,mov)=>{
+  if (acc>mov)return acc;
+  else return move;},movements[0];
+console.log(max);
+
+
+
