@@ -461,7 +461,14 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
 */
-
+cosnt calcAverageHumanAge=function(ages){
+  const humanAge=ages.map(age=>(age<=2?2*age:16+age*4));
+  const adults=humanAge.filter(age=>age>=18);
+  console.log(humanAge);
+  console.log(adults);
+  const average=addults.reduce((acc,age)=>acc+age,0)/adults.length;
+  cosnt average=adults.reduce((acc,age,i,arr)=>acc+age/arr.length,0);
+  return average;
 /*
 const calcAverageHumanAge = function (ages) {
   const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
@@ -1010,6 +1017,13 @@ const maz=movements.reduce((acc,mov)=>{
   if (acc>mov)return acc;
   else return move;},movements[0];
 console.log(max);
+const calcDisplayBalance1=function(movements){
+    const balance=movements.reduce(((acc,cur)=>acc+cur),0);
+    labelBalance.textContent=`${balance}€`;
+    console.log(balance);
+
+}
+calcDisplayBalance1(account1.movements)
 
 
 
