@@ -1013,10 +1013,25 @@ let balance =0;
 for (const mov of movements)balance+=mov;
 console.log(balance)
 
+const calcDisplaySummary1=function(movements){
+    const incomes=movements.filter(mov=>mov>0).reduce((acc,mov)=>acc+mov,0);
+    labelSumIn.textContent=`${incomes}€`;
+    const out=movements.filter(mov=>mov<0).reduce((acc,mov)=>acc+mov,0);
+    labelSumOut.textContent=`${Math.abs(out)}€`;
+    const interest=movements.filter(mov=>mov>0).map(deposit=>(deposit*1.2)/100).filter((int,i,arr)=>{
+        return int>=1;
+    })
+    labelSumInterest.textContent=`${interest.reduce((acc,int)=>acc+int,0)}€`;
+
+
+}
+calcDisplaySummary1(account1.movements);
+
 const maz=movements.reduce((acc,mov)=>{
   if (acc>mov)return acc;
   else return move;},movements[0];
 console.log(max);
+
 const calcDisplayBalance1=function(movements){
     const balance=movements.reduce(((acc,cur)=>acc+cur),0);
     labelBalance.textContent=`${balance}€`;
@@ -1024,6 +1039,7 @@ const calcDisplayBalance1=function(movements){
 
 }
 calcDisplayBalance1(account1.movements)
+
 
 
 
