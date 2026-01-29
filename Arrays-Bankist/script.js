@@ -1034,6 +1034,20 @@ const calcDisplayBalance1=function(movements){
 calcDisplayBalance1(account1.movements)
 
 
+btnLogin.addEventListener('click',function(e){
+  e.preventDefault();
+  currentAccount=accounts.find(acc=>acc.username===inputLoginUsername.value);
+  console.log(currentAccount);
+  if (currentAccount?.pin===Number(inputLonginPin.value)){
+    labelWelcome.textContent=`Welcome back @{currentAccount.owner.split('')[0]}`;
+    containerApp.style.opacity=100;
+    inputLoginUsername.value=inputloginPin.value='';
+    inputLoninpin.blur();
+    displayMovements(currentAccount.movements);
+    calcDisplayBalance(currentAccount.movements);
+    calcDisplaySummary(currentAccount)
+
+
 
 
 
