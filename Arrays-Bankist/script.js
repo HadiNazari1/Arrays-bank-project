@@ -1059,6 +1059,17 @@ btnClose.addEventListener('click',function(e){
     }
 })
 
+    btnLoan.addEventListener('click',function(e){
+      e.preventDefault();
+      console.log('loan is Applied);
+      const amount1= Numebr(inpuetLoanAmount.value);
+      if (amount1>0&& currentAccount.movements.some(mov=>mov>=amount1*0.1)){
+        courrrentAccount.movements.push(amount1);
+        updateUI(currentAccount);
+      })
+    
+
+
 
 
 
