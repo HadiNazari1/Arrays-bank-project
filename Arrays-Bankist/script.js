@@ -140,7 +140,7 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
-///////////////////////////////////////
+
 // Event handlers
 let currentAccount;
 
@@ -616,7 +616,8 @@ YOUR TASKS:
 2. Find the name of the only breed that likes both "running" and "fetch" ("dogBothActivities" variable)
 3. Create an array "allActivities" of all the activities of all the dog breeds
 4. Create an array "uniqueActivities" that contains only the unique activities (no activity repetitions). HINT: Use a technique with a special data structure that we studied a few sections ago.
-5. Many dog breeds like to swim. What other activities do these dogs like? Store all the OTHER activities these breeds like to do, in a unique array called "swimmingAdjacent".
+5. Many dog breeds like to swim. What other activities do these dogs like? Store all the OTHER activities these breeds like to do, in a unique 
+array called "swimmingAdjacent".
 6. Do all the breeds have an average weight of 10kg or more? Log to the console whether "true" or "false".
 7. Are there any breeds that are "active"? "Active" means that the dog has 3 or more activities. Log to the console whether "true" or "false".
 
@@ -1120,7 +1121,16 @@ cosnt allActivities=breed.flatMap(breed=> breed.activities);
     consoel.log(allActivities);
     
     
+    const allBreedsWeight=breeds.map(breed=>breed.averageWeight);
+    const allBreedsWeightCheck=allBreedsWeight.every(weight=>weight>=3);
+    console.log(activities);
+    const activeBreeds=breeds.some(breed=>breed.activitiers.lenght>=3);
+    console.log(activeBreeds);
+
+    const heaviestFetchBreedWeight=Math.max(...breeds.filter(breed=>breed.activities.includes('fetch')).map (breed=>breed.averageWeight);
+    console.log(heaviestFetchBreedWeight);
     
+
 
 
 
