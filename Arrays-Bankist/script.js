@@ -1129,7 +1129,22 @@ cosnt allActivities=breed.flatMap(breed=> breed.activities);
 
     const heaviestFetchBreedWeight=Math.max(...breeds.filter(breed=>breed.activities.includes('fetch')).map (breed=>breed.averageWeight);
     console.log(heaviestFetchBreedWeight);
+
     
+    
+
+const groupedMovements=Object.groupBy(movements,movement=> movement>0 ? 'deposits' : 'withdrawals');
+console.log(groupedMovements);
+
+const groupedByAcitivity=Object.groupBy(accounts,account=>{
+  const movementCount=account.movements.length;
+  if (movementCount>=8) return 'very active';
+  if (movementCount>=4) return 'active';
+  if (movementCount>=1) return 'moderate';
+  return 'inactive';
+})
+console.log(groupedByAcitivity);
+
 
 
 
