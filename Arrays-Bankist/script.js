@@ -1144,6 +1144,21 @@ const groupedByAcitivity=Object.groupBy(accounts,account=>{
   return 'inactive';
 })
 console.log(groupedByAcitivity);
+    
+const y=Array.from({length:7},()=>1);
+console.log(y);
+
+const z= Array.from({length:7},(_,i)=>i+1);
+console.log(z);
+labelBalance.addEventListener('click',function(){
+  const movementsUI=Array.from(document.querySelectorAll('.movements_value'),el=>Number(el.textContent.replace('€','')));
+  console.log(movementsUI);
+  const movementsUI2=[...document.querySelectorAll('.movements__value')];
+  console.log(movementsUI2);
+
+
+})
+
 
 
 
