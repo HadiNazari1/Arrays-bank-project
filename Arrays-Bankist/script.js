@@ -1160,8 +1160,10 @@ labelBalance.addEventListener('click',function(){
 })
 
 
-
-
+cosnt convetTextToTitleCase= function(title){
+  const exceptions=['a', 'and', 'or', 'the', 'with', 'in', 'but', 'an']
+  const titleCase=title.toLowerCase().split(' ').map(word=> exceptions.includes(word) ? word : word[0].toUpperCase()+word.slice(1)).join(' ');
+  const titledCased= title.toLowerCase().split(' ').map(word=> exception.includes(word)? word:word[0].toUpperCase()+word.slice[1]).join(' ');
 
 
 
