@@ -886,12 +886,15 @@ console.log(convertTitleCase('and here is another title with an EXAMPLE'));
 /* 
 Julia and Kate are still studying dogs. This time they are want to figure out if the dogs in their are eating too much or too little food.
 
-- Formula for calculating recommended food portion: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
+- Formula for calculating recommended food portion: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to
+be in kg)
 - Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite.
 - Eating an okay amount means the dog's current food portion is within a range 10% above and below the recommended portion (see hint).
 
 YOUR TASKS:
-1. Loop over the array containing dog objects, and for each dog, calculate the recommended food portion (recFood) and add it to the object as a new property. Do NOT create a new array, simply loop over the array (We never did this before, so think about how you can do this without creating a new array).
+1. Loop over the array containing dog objects, and for each dog, calculate the recommended food portion (recFood) and add it to the 
+object as a new property.
+Do NOT create a new array, simply loop over the array (We never did this before, so think about how you can do this without creating a new array).
 2. Find Sarah's dog and log to the console whether it's eating too much or too little. HINT: Some dogs have multiple users, so you first need to find Sarah in the owners array, and so this one is a bit tricky (on purpose) 🤓
 3. Create an array containing all owners of dogs who eat too much (ownersTooMuch) and an array with all owners of dogs who eat too little (ownersTooLittle).
 4. Log a string to the console for each array created in 3., like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
@@ -916,7 +919,7 @@ const dogs = [
 
 GOOD LUCK 😀
 */
-
+  dogs.forEach(dog=>(dog.recfood=Math.floor(dog.weight**75*28)));
 /*
 const dogs = [
   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
@@ -1164,6 +1167,7 @@ cosnt convetTextToTitleCase= function(title){
   const exceptions=['a', 'and', 'or', 'the', 'with', 'in', 'but', 'an']
   const titleCase=title.toLowerCase().split(' ').map(word=> exceptions.includes(word) ? word : word[0].toUpperCase()+word.slice(1)).join(' ');
   const titledCased= title.toLowerCase().split(' ').map(word=> exception.includes(word)? word:word[0].toUpperCase()+word.slice[1]).join(' ');
+
 
 
 
