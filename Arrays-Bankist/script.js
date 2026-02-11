@@ -506,7 +506,6 @@ console.log(totalDepositsUSD);
 // Coding Challenge #3
 
 /* 
-Rewrite the 'calcAverageHumanAge' function from the previous challenge, but this time as an arrow function, and using chaining!
 
 TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
 TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
@@ -582,6 +581,12 @@ console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
 
+i can overcome this challenge no matter how hard it is i an doit 
+i belive in my self 
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
 
 ///////////////////////////////////////
 // flat and flatMap
@@ -1180,6 +1185,7 @@ cosnt convetTextToTitleCase= function(title){
   const exceptions=['a', 'and', 'or', 'the', 'with', 'in', 'but', 'an']
   const titleCase=title.toLowerCase().split(' ').map(word=> exceptions.includes(word) ? word : word[0].toUpperCase()+word.slice(1)).join(' ');
   const titledCased= title.toLowerCase().split(' ').map(word=> exception.includes(word)? word:word[0].toUpperCase()+word.slice[1]).join(' ');
+
 
 
 
