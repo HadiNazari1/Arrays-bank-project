@@ -243,9 +243,9 @@ btnSort.addEventListener('click', function (e) {
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-/*
+
 /////////////////////////////////////////////////
-// Simple Array Methods
+//Simple Array Methods
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // SLICE
@@ -340,7 +340,7 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -1185,6 +1185,7 @@ cosnt convetTextToTitleCase= function(title){
   const exceptions=['a', 'and', 'or', 'the', 'with', 'in', 'but', 'an']
   const titleCase=title.toLowerCase().split(' ').map(word=> exceptions.includes(word) ? word : word[0].toUpperCase()+word.slice(1)).join(' ');
   const titledCased= title.toLowerCase().split(' ').map(word=> exception.includes(word)? word:word[0].toUpperCase()+word.slice[1]).join(' ');
+
 
 
 
